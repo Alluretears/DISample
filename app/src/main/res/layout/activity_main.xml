@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+  <TextView
+      android:id="@+id/text_dagger2"
+      android:layout_width="0dp"
+      android:layout_height="?android:listPreferredItemHeight"
+      android:layout_marginEnd="0dp"
+      android:layout_marginStart="0dp"
+      android:background="?selectableItemBackground"
+      android:gravity="center_vertical"
+      android:paddingEnd="32dp"
+      android:paddingStart="32dp"
+      android:text="Dagger2"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="HardcodedText"
+      />
+
+  <View
+      android:id="@+id/divider1"
+      android:layout_width="0dp"
+      android:layout_height="1dp"
+      android:background="#CCCCCC"
+      app:layout_constraintTop_toBottomOf="@id/text_dagger2"
+      />
+
+  <TextView
+      android:id="@+id/text_koin"
+      android:layout_width="0dp"
+      android:layout_height="?android:listPreferredItemHeight"
+      android:layout_marginEnd="0dp"
+      android:layout_marginStart="0dp"
+      android:background="?selectableItemBackground"
+      android:gravity="center_vertical"
+      android:paddingEnd="32dp"
+      android:paddingStart="32dp"
+      android:text="Koin"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/text_dagger2"
+      tools:ignore="HardcodedText"
+      />
+
+</android.support.constraint.ConstraintLayout>
