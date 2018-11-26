@@ -1,5 +1,6 @@
 package com.zech.disample.dagger2
 
+import android.arch.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
@@ -13,6 +14,9 @@ import kotlinx.android.synthetic.main.activity_login.edit_user_name
 import javax.inject.Inject
 
 class LoginActivity : AppCompatActivity() {
+
+  @Inject
+  lateinit var viewModelFactory: ViewModelProvider.Factory
 
   @Inject
   lateinit var loginManager: LoginManager
