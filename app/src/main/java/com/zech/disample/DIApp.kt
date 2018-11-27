@@ -13,18 +13,18 @@ import javax.inject.Inject
 
 class DIApp : Application(), HasActivityInjector {
 
-  @Inject
-  lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
-  override fun activityInjector(): AndroidInjector<Activity> = dispatchingAndroidInjector
+    override fun activityInjector(): AndroidInjector<Activity> = dispatchingAndroidInjector
 
-  override fun onCreate() {
-    super.onCreate()
-    Stetho.initializeWithDefaults(this)
-    DaggerAppComponent.builder()
-        .application(this)
-        .build()
-        .inject(this)
-    startKoin(this, listOf(appModule))
-  }
+    override fun onCreate() {
+        super.onCreate()
+        Stetho.initializeWithDefaults(this)
+        DaggerAppComponent.builder()
+            .application(this)
+            .build()
+            .inject(this)
+        startKoin(this, listOf(appModule))
+    }
 }

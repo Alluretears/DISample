@@ -9,8 +9,8 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module.module
 
 val appModule = module {
-  single<ApiService> { FakeApiServiceImpl() }
-  single(name = "default") { PreferenceManager.getDefaultSharedPreferences(androidContext()) }
-  single(name = "app") { androidContext().getSharedPreferences("app", Context.MODE_PRIVATE) }
-  single { LoginManager(get(), get(name = "default")) }
+    single<ApiService> { FakeApiServiceImpl() }
+    single(name = "default") { PreferenceManager.getDefaultSharedPreferences(androidContext()) }
+    single(name = "app") { androidContext().getSharedPreferences("app", Context.MODE_PRIVATE) }
+    single { LoginManager(get(), get(name = "default")) }
 }

@@ -5,6 +5,6 @@ import dagger.android.ContributesAndroidInjector
 
 @Module
 abstract class ActivityModule {
-  @ContributesAndroidInjector
-  abstract fun contributeLoginActivity(): LoginActivity
+    @ContributesAndroidInjector
+    abstract fun contributeLoginActivity(): LoginActivity
 }
