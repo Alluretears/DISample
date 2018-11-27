@@ -4,8 +4,6 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import com.zech.disample.ApiService
-import com.zech.disample.FakeApiServiceImpl
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
@@ -29,11 +27,5 @@ class AppModule {
     @Provides
     fun provideAppSharePreferences(context: Context): SharedPreferences {
         return context.getSharedPreferences("app", Context.MODE_PRIVATE)
-    }
-
-    @Singleton
-    @Provides
-    fun provideApiService(): ApiService {
-        return FakeApiServiceImpl()
     }
 }

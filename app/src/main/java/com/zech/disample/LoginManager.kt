@@ -1,13 +1,14 @@
 package com.zech.disample
 
 import android.content.SharedPreferences
+import com.zech.disample.dagger2.Impl
 import javax.inject.Inject
 import javax.inject.Named
 import javax.inject.Singleton
 
 @Singleton
 class LoginManager @Inject constructor(
-    private val apiService: ApiService,
+    @Impl private val apiService: ApiService,
     @Named("app") private val sharedPreferences: SharedPreferences
 ) {
 
